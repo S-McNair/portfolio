@@ -1,0 +1,100 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='style.css' />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+  <title>Contact Shane</title>
+</head>
+
+<body>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+  <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+        <a class='navbar-brand' href='./' style='color:blanchedalmond'>Shane McNair</a>
+      </div>
+
+      <ul class='nav navbar-nav mr-auto'>
+        <li>
+          <a class='active nav-text' href='./'>Home </a>
+        </li>
+        <li>
+          <a class='nav-text' href='projects'>Projects </a>
+        </li>
+        <li>
+          <a class='nav-text active' href='about'>Test </a>
+        </li>
+        <li>
+          <a class='nav-text' href='contact'>Contact </a>
+        </li>
+      </ul>
+
+      <div>
+        <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
+          <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
+        </a>
+      </div>
+      <div>
+        <a class='nav-text' href='https://github.com/S-McNair' target='blank'>
+          <span class="github fa fa-github-square" style="font-size:36"></span>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <br />
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+  <header class='page-header title'>
+    <h1>Contact Shane</h1>
+    <h5>Please fill out the form below:</h5>
+  </header>
+
+  <br /><br /><br />
+
+  <div class='form-group row contact'>
+
+    <div class='col-md-4 spacer'></div>
+
+    <div id='contact-form' class='col-md-4'>
+      <form action="/thanks" method="POST">
+        <label for="firstName">First Name:</label>
+        <br />
+        <input id="firstName" name="firstName" type="text" placeholder="First Name" autofocus>
+        <br />
+        <br />
+        <label for="lastName">Last Name:</label>
+        <br />
+        <input id="lastName" name="lastName" type="text" placeholder="Last Name">
+        <br />
+        <br />
+        <label for="email">Email:</label>
+        <br />
+        <input id="email" name="email" type="text" placeholder="Email Address">
+        <br />
+        <br />
+        <label for='message'>Message for Shane:</label>
+        <br />
+        <textarea cols='50' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
+        <br/>
+        <br />
+        <input type='submit' style='float:right' />
+      </form>
+    </div>
+
+    <div class='col-md-4 spacer'></div>
+    <!-- <div class='col-md-5'>
+      <p>
+        this is where something will go, probs an image
+      </p>
+    </div> -->
+  </div>
+  </div>
+</body>
+
+</html>

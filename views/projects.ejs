@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link type='text/css' rel='stylesheet' href='style.css' />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+    <title>Shane's Projects</title>
+</head>
+
+<body class='projects-body'>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+    <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
+        <div class='container-fluid'>
+            <div class='navbar-header'>
+                <a class='navbar-brand' href='./' style='color:blanchedalmond'>Shane McNair</a>
+            </div>
+
+            <ul class='nav navbar-nav mr-auto'>
+                <li class='nav-item active'>
+                    <a class='active nav-text' href='./'>Home </a>
+                </li>
+                <li>
+                    <a class='nav-text' href='projects'>Projects </a>
+                </li>
+                <li>
+                    <a class='nav-text active' href='about'>Test </a>
+                </li>
+                <li>
+                    <a class='nav-text' href='contact'>Contact </a>
+                </li>
+            </ul>
+
+            <div>
+                <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
+                    <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
+                </a>
+            </div>
+            <div>
+                <a class='nav-text' href='https://github.com/S-McNair' target='blank'>
+                    <span class="github fa fa-github-square" style="font-size:36"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+    <div class='container-fluid projects-img'>
+        <img src='pictures/proj_bkgrnd.png' alt='404' height=80% width=100% />
+        <div class='project-text top-centered '>
+            <h1 class='title'>PROJECTS</h1>
+        </div>
+        <!--style='color:blanchedalmond'-->
+    </div>
+
+    <br />
+
+    <form class='form-group row rowOne'>
+        <div class='col-md-1 spacer'></div>
+
+        <!-- <div class='card col-md-4 projects-card'> -->
+        <div id='seiscmicTracker' class='card col-md-5 projects-card'>
+            <div class='card-body'>
+                <h4 class='card-title'>Global Siesmic Activity Tracker</h4>
+                <img class='proj_screenshot' src='./pictures/SeismicEventsTracker.png' alt='image coming soon'>
+                <br />
+                <p class='proj-text'>
+                    72-hour hackathon project that utilizes multiple public APIs to give the user a filterable list of seismic events from around
+                    the globe, including links to further info and google satellite maps of the area of the event.
+                </p>
+                <a href='https://github.com/S-McNair/seismic_tracker' target='0' class='btn btn-success'>Link to GitHub</a>
+            </div>
+        </div>
+
+        <!-- <div class='card col-md-4 projects-card'> -->
+        <div id='todoList' class='card col-md-5 projects-card'>
+            <div class='card-body'>
+                <h4 class='card-title'>Todo List</h4>
+                <img class='proj_screenshot' src='./pictures/React_VSTDA.png' alt='image coming soon'>
+                <p class='proj-text'>
+                    Todo List app built using React which will allow the user to add, edit, check-off and delete tasks.
+                    <p class='proj-text'>
+                        <a href='https://github.com/S-McNair/React100-VSTDA' target='0' class='btn btn-success'>Link to GitHub</a>
+            </div>
+        </div>
+    </form>
+
+    <form class='form-group row rowTwo'>
+        <div class='col-md-1 spacer'></div>
+
+        <!-- <div class='card col-md-4 projects-card'> -->
+        <div id='changeCalculator' class='card col-md-5 projects-card'>
+            <div class='card-body'>
+                <h4 class='card-title'>Change Calculator</h4>
+                <img class='proj_screenshot' src='./pictures/ReactChangeCalc.png' alt='image coming soon'>
+                <p class='proj-text'>
+                    A simple change calculator built with ReactJS that takes two inputs: AMount Due and Amount Recieved and returns the total change due as well as the identify how many of each denomination coin/bill should be returned.
+                </p>
+                <a href='https://github.com/S-McNair/React-Change-Calculator' target='0' class='btn btn-success'>Link to GitHub</a>
+            </div>
+        </div>
+
+        <!-- </form>
+
+    <form class='form-group row rowTwo'> -->
+
+        <!-- <div class='card col-md-4 projects-card'> -->
+        <div id='SDtopSpots' class='card col-md-5 projects-card'>
+            <div class='card-body'>
+                <h4 class='card-title'>San Diego Top Spots</h4>
+                <img class='proj_screenshot' src='./pictures/SDTopSpots.png' alt='image coming soon'>
+                <p class='proj-text'>
+                    An app built using ReactJS and a static API that will retrieve and display data for top spots around San Diego County and allows users to click a button to get directions from their location to the selected top spot.
+                </p><br />
+                <a href='https://github.com/S-McNair/React-San-Diego-Top-Spot' target='0' class='btn btn-success'>Link to GitHub</a>
+            </div>
+        </div>
+
+    </form>
+
+    <form class='form-group row rowThree'>
+        <div class='col-md-1 spacer'></div>
+
+        <div id='mortgageCalculator' class='card col-md-5 projects-card'>
+            <div class='card-body'>
+                <h4 class='card-title'>MORTGAGE CALCULATOR</h4>
+                <img class='proj_screenshot' src='./pictures/MortgageCalculator.png' alt='image coming soon'>
+                <p class='proj-text'>
+                    A basic Mortgage Calculator built using ReactJS that accepts Loan Balance, Interest Rate and Loan Terms as inputs and returns the monthly payment amount to the user as an output.
+                </p>
+                <a href='https://github.com/S-McNair/react-mortgage-calculator' target='0' class='btn btn-success'>Link to GitHub</a>
+            </div>
+        </div>
+
+        <!-- <div class='card col-md-5 projects-card'>
+            <div class='card-body'>
+                <h4 class='card-title'>PROJECT NAME</h4>
+                <img class='proj_screenshot' src='#' alt='image coming soon'>
+                <p class='proj-text'>
+                    Description of the Project Goes Here
+                </p>
+                <a href='#' target='0' class='btn btn-success'>Link to GitHub</a>
+            </div>
+        </div> -->
+
+    </form>
+
+
+
+
+</body>
+
+</html>

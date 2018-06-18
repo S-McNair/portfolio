@@ -1,0 +1,134 @@
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css' integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4'
+    crossorigin='anonymous'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='style.css' />
+
+  <title> Shane's Portfolio </title>
+</head>
+
+<body>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+  <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+        <a class='navbar-brand' href='./' style='color:blanchedalmond'>Shane McNair</a>
+      </div>
+
+      <ul class='nav navbar-nav mr-auto'>
+        <li>
+          <a class='active nav-text' href='./'>Home </a>
+        </li>
+        <li>
+          <a class='nav-text' href='projects'>Projects </a>
+        </li>
+        <!-- <li>
+          <a class='nav-text active' href='about'>Test </a>
+        </li> -->
+        <li>
+          <a class='nav-text' href='contact'>Contact </a>
+        </li>
+      </ul>
+      <div>
+        <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
+          <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
+        </a>
+      </div>
+      <div>
+        <a class='nav-text' href='https://github.com/S-McNair' target='blank'>
+          <span class="github fa fa-github-square" style="font-size:36"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+  <div class='container index-img' id='header-image'></div>
+  <img src='pictures/saratoga_sunrise.png' alt='Broken Arrow' height=100% width=100% />
+  <h1 class='top-centered title' style='color:black'>Shane McNair</h1>
+  <div class='top-subTitle' id='subTitle'></div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <h2 style='text-align:center'>About Me</h2>
+  <br/>
+
+  <div class='form-group row'>
+
+    <div class='col-md-1 spacer'></div>
+    <div class='col-md-10'>
+
+      <p> My name is Shane McNair and I am currently pursuing a certification in Full Stack Java Script Development. Prior to
+        my current academic endeavors I served four years in the United States Navy aboard the guided missile cruiser USS
+        Chancellorsville (CG-62) where I served as an electrician. Performing troubleshooting, maintenance and repairs of
+        the shipboard electrical systems as well as shipboard firefighting and damage control responsibilities I advanced
+        quickly through the Navy’s ranks, being promoted three times and twice being awarded the Navy Achievement Medal among
+        other commendations. After leaving the Navy with an Honorable Discharge and obtaining a BS in Electronics Engineering
+        I worked for several years as a Fiber Optics Calibration Technician II for Advanced Test Equipment Rentals in San
+        Diego, CA. In this role I acted as the Lead Fiber Optics Technician and would ensure proper functionality of every
+        piece of fiber optics equipment in the inventory as well as train customers and co-workers on proper operation. In
+        search of a new challenge with greater job prospects going forward I resigned my position with Advanced Test Equipment
+        to attend Origin Code Academy in San Diego, CA and professionally pursue what has long been a personal interest.
+      </p>
+      <p> I am a hard working, trustworthy individual. While naturally gravitating towards leadership roles within a team it
+        is ingrained in me that best leaders are great followers first. A staunch believer in personal accountability I hold
+        myself and those around me to a high standard of excellence.
+      </p>
+      <!-- <p>    I do not strive for personal glory or monuments to my own achievements but much prefer to encourage others to achieve or surpass their truest potential. That is not to say I am so altruistic as to forego all personal praise and reward but I have always firmly believed it is first about the success of the team and in a far second place is the glory of the individual. Personal accolades can only be born from team success.
+    </p>     -->
+      <p> In my free time I enjoy yoga, lifting weights, going for hikes or otherwise just getting outside and enjoying this
+        magnificent little slice of the planet known as San Diego. In the summer I can quite often be found either at a Padres
+        game or somewhere watching my beloved Boston Red Sox. One day in the near future I intend to build the internet’s
+        premier Fantasy Baseball platform for myself and my friends.
+      </p>
+    </div>
+
+    <div class='col-md-1 spacer'></div>
+    <!-- <div class='col-md-5'>
+      <p>well then</p>
+  </div>   -->
+
+  </div>
+
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
+    crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
+    crossorigin='anonymous'></script>
+  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T'
+    crossorigin='anonymous'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
+
+  <script>
+
+    var subTitle = document.getElementById('subTitle');
+
+    var typewriter = new Typewriter(subTitle, {
+      loop: true
+    });
+
+    typewriter.typeString('Web Developer')
+      .pauseFor(1800)
+      .deleteAll()
+      .typeString('HTML 5, Bootstrap 4, CSS 3, ReactJS')
+      .pauseFor(2500)
+      .deleteAll()
+      .typeString('Node JS, Express JS, SQL, MongoDB')
+      .pauseFor(2500)
+      // .deleteAll()
+      // .typeString('Experienced Troubleshooter, Customer Service Professional')
+      .start();
+
+  </script>
+</body>
+
+</html>

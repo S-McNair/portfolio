@@ -1,0 +1,30 @@
+{
+  "name": "startnow-node200-ejs-portfolio",
+  "version": "1.0.0",
+  "description": "my personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-McNair/portfolio.git"
+  },
+  "author": "Shane McNair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/S-McNair/portfolio/issues"
+  },
+  "homepage": "https://github.com/S-McNair/portfolio#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "googleapis": "^27.0.0",
+    "jquery": "^3.3.1",
+    "morgan": "^1.9.0",
+    "typed.js": "^2.0.8"
+  }
+}

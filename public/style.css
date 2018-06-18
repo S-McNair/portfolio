@@ -1,0 +1,84 @@
+body {
+  /* background:darkgray; */
+  background:black;
+  padding-top: 40;
+  color: blanchedalmond;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.title {
+  font-family: "Roboto mono", monospace; 
+  font-size: 84;
+  color: blanchedalmond;
+}
+
+#subTitle {
+  font-size: 42;
+}
+
+.top-centered {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-subTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+
+.navbar {
+  background-color:black;
+}
+
+.nav-text {
+  color:blanchedalmond;
+  padding-left:10;
+  padding-right:10;
+}
+
+.navbar-brand {
+  color:blanchedalmond
+}
+
+#contact-form {
+  padding-left: 50;
+}
+
+.proj_screenshot {
+  width: 100%;
+  height: 40%
+}
+
+.proj-text {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.projects-card {
+  background-color: black;
+  text-align: center;
+}
+
+.modal {
+  color: black;
+}
+
+.contact {
+  text-align: center;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN TYPEWRITER ANIMATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END TYPEWRITER ANIMATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

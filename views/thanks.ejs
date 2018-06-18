@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+  <title>Shane Thanks You</title>
+</head>
+
+<body>
+
+  <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+          <a class='navbar-brand' href='./' style='color:blanchedalmond' >Shane McNair</a>
+      </div>
+
+      <ul class='nav navbar-nav mr-auto'>
+        <li>
+          <a class='active nav-text' href='./'>Home </a>
+        </li>
+        <li>
+          <a class='nav-text' href='projects'>Projects </a>
+        </li>
+        <li>
+          <a class='nav-text active' href='about'>Test </a>
+        </li>
+        <li>
+          <a class='nav-text' href='contact'>Contact </a>
+        </li>
+      </ul>
+
+      <div>
+        <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
+          <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
+        </a>
+      </div>
+      <div>
+        <a class='nav-text' href='https://github.com/S-McNair' target='blank'>
+          <span class="github fa fa-github-square" style="font-size:36"></span>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+  <br />
+  <div>
+    Thank you
+    <%= contact.firstName %>
+      <%= contact.lastName %>!
+  </div>
+</body>
+
+</html>
