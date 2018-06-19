@@ -4,7 +4,9 @@
   "description": "my personal portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    // "test":"mocha test/**/*.test.js --exit"
+    // "build": "webpack",
+    "test": "npm run build && mocha test/**/*.test.js --exit"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "googleapis": "^27.0.0",
     "jquery": "^3.3.1",
     "morgan": "^1.9.0",
-    "typed.js": "^2.0.8"
+    "typed.js": "^2.0.8",
+    "webpack": "^4.12.0"
   }
 }
