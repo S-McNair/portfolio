@@ -1,4 +1,4 @@
 .env
-.circleci
 test
 credentials.json
+
