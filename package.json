@@ -4,8 +4,6 @@
   "description": "my personal portfolio",
   "main": "index.js",
   "scripts": {
-    // "test":"mocha test/**/*.test.js --exit"
-    // "build": "webpack",
     "test": "npm run build && mocha test/**/*.test.js --exit"
   },
   "repository": {
