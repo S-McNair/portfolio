@@ -26,10 +26,13 @@
           <a class='nav-text' href='projects'>Projects </a>
         </li>
         <li>
-          <a class='nav-text active' href='about'>Test </a>
+          <a class='nav-text active' href='resume'>Resume </a>
         </li>
         <li>
           <a class='nav-text' href='contact'>Contact </a>
+        </li>
+        <li>
+          <a class='nav-text' href=# data-toggle="modal" data-target="#medModal">Modal Test</a>
         </li>
       </ul>
 
@@ -49,13 +52,63 @@
 
   <br />
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+  <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>Please fill out the form below:</h5>
+
+          <div id='contact-modal'>
+            <form action="/thanks" method="POST">
+              <!-- <label for="firstName">First Name:</label> -->
+              <br />
+              <input id="firstName" name="firstName" type="text" placeholder="First Name">
+              <br />
+              <!-- <label for="lastName">Last Name:</label> -->
+              <br />
+              <input id="lastName" name="lastName" type="text" placeholder="Last Name">
+              <br />
+              <!-- <label for="email">Email:</label> -->
+              <br />
+              <input id="email" name="email" type="text" placeholder="Email Address">
+              <br />
+              <!-- <label for='message'>Message for Shane:</label> -->
+              <br />
+              <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
+              <br/>
+              <!-- <input type='submit' /> -->
+              <!-- </form> 
+                    </div> -->
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            <button type='submit button' class='btn btn-dark'>Submit</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
 
   <header class='page-header title'>
     <h1>Contact Shane</h1>
     <h5>Please fill out the form below:</h5>
   </header>
 
-  <br /><br /><br />
+  <br />
+  <br />
+  <br />
 
   <div class='form-group row contact'>
 
@@ -80,10 +133,10 @@
         <br />
         <label for='message'>Message for Shane:</label>
         <br />
-        <textarea cols='50' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
+        <textarea cols='45' rows='8' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
         <br/>
         <br />
-        <input type='submit' style='float:right' />
+        <input type='submit' style='text-align:center' />
       </form>
     </div>
 
@@ -95,6 +148,14 @@
     </div> -->
   </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>

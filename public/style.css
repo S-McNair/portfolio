@@ -3,6 +3,7 @@ body {
   background:black;
   padding-top: 40;
   color: blanchedalmond;
+  font-family: "Roboto mono", monospace; 
 }
 
 .page-header {
@@ -16,7 +17,7 @@ body {
 }
 
 #subTitle {
-  font-size: 42;
+  font-size: 33;
 }
 
 .top-centered {
@@ -76,9 +77,51 @@ body {
   text-align: center;
 }
 
+.resume-body {
+  background: lightgray;
+  color:black;
+  margin: 50;
+}
 
+.resume-header {
+  text-align:center;
+  color: darkred;
+}
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN TYPEWRITER ANIMATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.resume {
+  /* text-align:'center'; */
+  /* font-weight: 400; */
+}
 
+.section-title {
+  color: darkred;
+  text-align: center;
+}
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END TYPEWRITER ANIMATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.company-name {
+  color: darkblue;
+}
+
+.job-title {
+  color: darkblue;
+}
+
+.ed-titles {
+  color:darkblue;
+}
+
+.resume-li {
+  text-align: left;
+}
+
+.thankYou {
+  text-align: center;
+  font-size: 50;
+  padding-top: 200;
+}
+
+.thanks-btn {
+  color: blanchedalmond; 
+  margin-left: 350;
+  margin-right:350;
+}
