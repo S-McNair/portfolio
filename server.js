@@ -59,6 +59,6 @@ app.post('/thanks', (req, res) => {
   sgMail.send(msg);
 });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log('listening at http://localhost:8080')
 });
