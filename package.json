@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "webpack && node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +20,8 @@
   "dependencies": {
     "@sendgrid/mail": "^6.2.1",
     "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
