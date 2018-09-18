@@ -23,7 +23,7 @@
 
       <ul class='nav navbar-nav mr-auto'>
         <li>
-          <a class='active nav-text' href='./'>Home </a>
+          <a class='active nav-text' href='about'>About Me </a>
         </li>
         <li>
           <a class='nav-text' href='projects'>Projects </a>
@@ -32,7 +32,7 @@
           <a class='nav-text active' href='resume'>Resume </a>
         </li>
         <li>
-          <a class='nav-text' href='contact'>Contact </a>
+          <a class='nav-text' href=# data-toggle="modal" data-target='#medModal'>Contact </a>
         </li>
       </ul>
       <div>
@@ -48,9 +48,59 @@
     </div>
   </nav>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+ <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Please fill out the form below:</h5>
+
+        <div id='contact-modal'>
+          <form action="/thanks" method="POST">
+            <!-- <label for="firstName">First Name:</label> -->
+            <br />
+            <input id="firstName" name="firstName" type="text" placeholder="First Name">
+            <br />
+            <!-- <label for="lastName">Last Name:</label> -->
+            <br />
+            <input id="lastName" name="lastName" type="text" placeholder="Last Name">
+            <br />
+            <!-- <label for="email">Email:</label> -->
+            <br />
+            <input id="email" name="email" type="text" placeholder="Email Address">
+            <br />
+            <!-- <label for='message'>Message for Shane:</label> -->
+            <br />
+            <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
+            <br/>
+            <!-- <input type='submit' /> -->
+            <!-- </form> 
+                  </div> -->
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          <button type='submit button' class='btn btn-dark'>Submit</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+
 
   <div class='container index-img' id='header-image'></div>
-  <img src='pictures/saratoga_sunrise.png' alt='Broken Arrow' height=100% width=100% />
+  <img src='images/saratoga_sunrise.png' alt='Broken Arrow' height=100% width=100% />
   <h1 class='top-centered title' style='color:black'>Shane McNair</h1>
   <div class='top-subTitle' id='subTitle'></div>
   </div>
@@ -59,47 +109,6 @@
   <br />
   <br />
   <br />
-
-  <h2 style='text-align:center'>About Me</h2>
-  <br/>
-
-  <div class='form-group row'>
-
-    <div class='col-md-1 spacer'></div>
-    <div class='col-md-10'>
-
-      <p> My name is Shane McNair and I am currently pursuing a certification in Full Stack JavaScript Development. Prior to
-        my current academic endeavors I served four years in the United States Navy aboard the guided missile cruiser USS
-        Chancellorsville (CG-62) where I served as an electrician. While performing troubleshooting, maintenance and repairs of
-        the shipboard electrical systems as well as shipboard firefighting and damage control responsibilities I advanced
-        quickly through the Navy’s ranks, being promoted three times and twice being awarded the Navy Achievement Medal among
-        other commendations. After leaving the Navy with an Honorable Discharge and obtaining a BS in Electronics Engineering
-        I worked as a Fiber Optics Calibration Technician II for Advanced Test Equipment Rentals in San Diego, CA. In this
-        role I acted as the Lead Fiber Optics Technician and would ensure proper functionality of every piece of fiber optics
-        equipment in the inventory as well as train customers and co-workers on proper operation. In search of a new challenge
-        with greater job prospects going forward I resigned my position with Advanced Test Equipment to attend Origin Code
-        Academy in San Diego, CA and professionally pursue what has long been a personal interest.
-      </p>
-      <p> I am a hard working, trustworthy individual. While naturally gravitating towards leadership roles within a team it
-        is ingrained in me that best leaders are great followers first. A staunch believer in personal accountability I hold
-        myself and those around me to a high standard of excellence.
-      </p>
-      <!-- <p>    I do not strive for personal glory or monuments to my own achievements but much prefer to encourage others to achieve or surpass their truest potential. That is not to say I am so altruistic as to forego all personal praise and reward but I have always firmly believed it is first about the success of the team and in a far second place is the glory of the individual. Personal accolades can only be born from team success.
-    </p>     -->
-      <p> In my free time I enjoy yoga, lifting weights, going for hikes or otherwise just getting outside and enjoying the unbelievable
-        priveldge that is living in San Diego. In the summer I can quite often be found either at a Padres game or somewhere
-        watching my beloved Boston Red Sox. One day in the near future I intend to build the internet’s premier Fantasy Baseball
-        platform for myself and my friends.
-      </p>
-      <!-- <p>
-        For more information please check out the <i>Projects</i>  and <i>Resume</i> tabs or reach out via the  <i>Contact</i> tab at the top of the page.
-      </p> -->
-      <br/>
-    </div>
-
-    <div class='col-md-1 spacer'></div>
-
-  </div>
 
   <footer >
     <p style='float:right' >Created and maintained by: Shane McNair</p>
@@ -131,7 +140,7 @@
     typewriter.typeString('Web Developer')
       .pauseFor(2000)
       .deleteAll()
-      .typeString('HTML 5, Bootstrap 4, CSS 3, React, Redux')
+      .typeString('HTML 5, CSS 3, React, Redux')
       .pauseFor(2000)
       .deleteAll()
       .typeString('NodeJS, ExpressJS, SQL, MongoDB')
