@@ -1,9 +1,14 @@
 body {
   /* background:darkgray; */
-  background:black;
+  background: rgb(31,31,31);
   padding-top: 40;
   color: blanchedalmond;
   font-family: "Roboto mono", monospace; 
+}
+
+.landing-img {
+  position: relative;
+  height: 50%;
 }
 
 .page-header {
@@ -35,6 +40,21 @@ body {
   color: black;
 }
 
+.btn-submit {
+  background-color: red;
+}
+.modal-header, .modal-footer {
+  background-color: lightgrey;
+  color: black;
+}
+
+.footer {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: black;
+}
 
 .navbar {
   background-color:black;
@@ -54,6 +74,10 @@ body {
   padding-left: 50;
 }
 
+.projects-background-img {
+  filter: blur(1px);
+}
+
 .proj_screenshot {
   width: 100%;
   height: 40%
@@ -65,8 +89,9 @@ body {
 }
 
 .projects-card {
-  background-color: black;
+  background-color: rgb(31,31,31);
   text-align: center;
+  border: none;
 }
 
 .modal {

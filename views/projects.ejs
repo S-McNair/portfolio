@@ -6,13 +6,61 @@
         crossorigin="anonymous">
     <link type='text/css' rel='stylesheet' href='style.css' />
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-
+    <link href='' />
     <title>Shane's Projects</title>
 </head>
 
 <body class='projects-body'>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
 
+    <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Please fill out the form below:</h5>
+                    <br/>
+                    <div id='contact-modal'>
+                        <form action="/thanks" method="POST">
+                            <label for="firstName">First Name:</label>
+                            <br />
+                            <input id="firstName" name="firstName" type="text">
+                            <br />
+                            <br />
+                            <label for="lastName">Last Name:</label>
+                            <br />
+                            <input id="lastName" name="lastName" type="text">
+                            <br />
+                            <br />
+                            <label for="email">Email:</label>
+                            <br />
+                            <input id="email" name="email" type="text">
+                            <br />
+                            <br />
+                            <label for='message'>Message for Shane:</label>
+                            <br />
+                            <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
+                            <br/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type='submit button' class='btn btn-submit'>Submit</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
     <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
         <div class='container-fluid'>
             <div class='navbar-header'>
@@ -20,8 +68,8 @@
             </div>
 
             <ul class='nav navbar-nav mr-auto'>
-                <li class='nav-item active'>
-                    <a class='active nav-text' href='./'>Home </a>
+                <li>
+                    <a class='active nav-text' href='about'>About Me </a>
                 </li>
                 <li>
                     <a class='nav-text' href='projects'>Projects </a>
@@ -30,10 +78,9 @@
                     <a class='nav-text active' href='resume'>Resume </a>
                 </li>
                 <li>
-                    <a class='nav-text' href='contact'>Contact </a>
+                    <a class='nav-text' href=# data-toggle="modal" data-target='#medModal'>Contact </a>
                 </li>
             </ul>
-
             <div>
                 <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
                     <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
@@ -45,11 +92,11 @@
                 </a>
             </div>
         </div>
-    </nav>
+    </nav><br/>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
 
     <div class='container-fluid projects-img'>
-        <img src='images/proj_bkgrnd.png' alt='404' height=80% width=100% />
+        <img class='projects-background-img' src='images/proj_bkgrnd.png' alt='404' height=80% width=100% />
         <div class='project-text top-centered '>
             <h1 class='title'>PROJECTS</h1>
         </div>
@@ -80,13 +127,14 @@
                 <br />
                 <p class='proj-text'>
                     An app that allows a user to search for the current weather conditions in different cities across the globe built using React-Redux
-                </p><br />
+                </p>
+                <br /><br/>
                 <a href='https://github.com/S-McNair/Weather-App' target='0' class='btn btn-success'>Link to GitHub</a>
             </div>
         </div>
     </form>
 
-     <form class='form-group row rowTwo'>
+    <form class='form-group row rowTwo'>
         <div class='col-md-1 spacer'></div>
 
         <div id='todoList' class='card col-md-5 projects-card'>
@@ -97,7 +145,7 @@
                     Todo List app built using React which will allow the user to add, edit, check-off and delete tasks.
                 </p>
                 </br />
-                <br />
+                <br /><br/>
                 <a href='https://github.com/S-McNair/React100-VSTDA' target='0' class='btn btn-success'>Link to GitHub</a>
             </div>
         </div>
@@ -132,21 +180,21 @@
         </div>
 
         <div id='mortgageCalculator' class='card col-md-5 projects-card'>
-                <div class='card-body'>
-                    <h4 class='card-title'>MORTGAGE CALCULATOR</h4>
-                    <img class='proj_screenshot' src='./images/MortgageCalculator.png' alt='image coming soon'>
-                    <p class='proj-text'>
-                        A basic Mortgage Calculator built using ReactJS that accepts Loan Balance, Interest Rate and Loan Terms as inputs and returns
-                        the monthly payment amount to the user as an output.
-                    </p>
-                    <a href='https://github.com/S-McNair/react-mortgage-calculator' target='0' class='btn btn-success'>Link to GitHub</a>
-                </div>
+            <div class='card-body'>
+                <h4 class='card-title'>MORTGAGE CALCULATOR</h4>
+                <img class='proj_screenshot' src='./images/MortgageCalculator.png' alt='image coming soon'>
+                <p class='proj-text'>
+                    A basic Mortgage Calculator built using ReactJS that accepts Loan Balance, Interest Rate and Loan Terms as inputs and returns
+                    the monthly payment amount to the user as an output.
+                </p><br/>
+                <a href='https://github.com/S-McNair/react-mortgage-calculator' target='0' class='btn btn-success'>Link to GitHub</a>
             </div>
+        </div>
 
     </form>
 
-     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TEMPLATE FOR NEW ROWS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-   
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TEMPLATE FOR NEW ROWS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
 
     <!-- <form class='form-group row rowFive'>
         <div class='col-md-1 spacer'></div>
@@ -176,8 +224,27 @@
 
     </form> -->
 
-     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END: TEMPLATE FOR NEW ROWS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END: TEMPLATE FOR NEW ROWS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+    <footer class='footer'>
+        <p style='float:right'>Created and maintained by: Shane McNair</p>
+        <p>Find Shane on:</p>
+        <div class='form-group'>
+            <a href='https://github.com/S-McNair'>GitHub</a>
+            <br/>
+            <a href='https://www.linkedin.com/in/shanemcnair'>LinkedIn</a>
+            <br/>
+            <a href='shane.mcnair@gmail.com'>shane.mcnair@gmail.com</a>
+            <br/>
+        </div>
 
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 
 
 </body>

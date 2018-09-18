@@ -13,6 +13,54 @@
 </head>
 
 <body>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+  <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>Please fill out the form below:</h5>
+          <br/>
+          <div id='contact-modal'>
+            <form action="/thanks" method="POST">
+              <label for="firstName">First Name:</label>
+              <br />
+              <input id="firstName" name="firstName" type="text">
+              <br />
+              <br />
+              <label for="lastName">Last Name:</label>
+              <br />
+              <input id="lastName" name="lastName" type="text">
+              <br />
+              <br />
+              <label for="email">Email:</label>
+              <br />
+              <input id="email" name="email" type="text">
+              <br />
+              <br />
+              <label for='message'>Message for Shane:</label>
+              <br />
+              <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
+              <br/>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type='submit button' class='btn btn-submit'>Submit</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
 
   <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
@@ -48,76 +96,24 @@
     </div>
   </nav>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
- <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
- <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-  <div class="modal-dialog modal-md">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h5>Please fill out the form below:</h5>
-
-        <div id='contact-modal'>
-          <form action="/thanks" method="POST">
-            <!-- <label for="firstName">First Name:</label> -->
-            <br />
-            <input id="firstName" name="firstName" type="text" placeholder="First Name">
-            <br />
-            <!-- <label for="lastName">Last Name:</label> -->
-            <br />
-            <input id="lastName" name="lastName" type="text" placeholder="Last Name">
-            <br />
-            <!-- <label for="email">Email:</label> -->
-            <br />
-            <input id="email" name="email" type="text" placeholder="Email Address">
-            <br />
-            <!-- <label for='message'>Message for Shane:</label> -->
-            <br />
-            <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
-            <br/>
-            <!-- <input type='submit' /> -->
-            <!-- </form> 
-                  </div> -->
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-          <button type='submit button' class='btn btn-dark'>Submit</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
-
 
   <div class='container index-img' id='header-image'></div>
-  <img src='images/saratoga_sunrise.png' alt='Broken Arrow' height=100% width=100% />
+  <img class='langing-img' src='images/saratoga_sunrise.png' alt='Broken Arrow' height=100% width=100% />
   <h1 class='top-centered title' style='color:black'>Shane McNair</h1>
   <div class='top-subTitle' id='subTitle'></div>
   </div>
 
-  <br />
-  <br />
-  <br />
-  <br />
-
-  <footer >
-    <p style='float:right' >Created and maintained by: Shane McNair</p>
+  <footer class='footer'>
+    <p style='float:right'>Created and maintained by: Shane McNair</p>
     <p>Find Shane on:</p>
-    <div class='form-group row' >
-    <a href='https://www.linkedin.com/in/shanemcnair' >LinkedIn</a>
-    <a href='https://github.com/S-McNair' >GitHub</a>
-    <a href='shane.mcnair@gmail.com'>shane.mcnair@gmail.com</a>
-  </div>
+    <div class='form-group'>
+      <a href='https://github.com/S-McNair'>GitHub</a>
+      <br/>
+      <a href='https://www.linkedin.com/in/shanemcnair'>LinkedIn</a>
+      <br/>
+      <a href='shane.mcnair@gmail.com'>shane.mcnair@gmail.com</a>
+      <br/>
+    </div>
 
   </footer>
 
@@ -137,16 +133,23 @@
       loop: true
     });
 
-    typewriter.typeString('Web Developer')
-      .pauseFor(2000)
+    const pause = 200;
+
+    typewriter.typeString('Software Engineer')
+      .pauseFor(pause)
+      .deleteAll()
+      .typeString('Web Developer')
+      .pauseFor(pause)
       .deleteAll()
       .typeString('HTML 5, CSS 3, React, Redux')
-      .pauseFor(2000)
+      .pauseFor(pause)
       .deleteAll()
-      .typeString('NodeJS, ExpressJS, SQL, MongoDB')
-      .pauseFor(2000)
-      // .deleteAll()
-      // .typeString('Experienced Troubleshooter, Customer Service Professional')
+      .typeString('NodeJS, ExpressJS')
+      .pauseFor(pause)
+      .deleteAll()
+      .typeString('NoSQL, SQL, MongoDB')
+      .pauseFor(pause)
+      .deleteAll()
       .start();
 
   </script>
