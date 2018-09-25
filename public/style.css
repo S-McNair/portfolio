@@ -1,14 +1,40 @@
+/* @media only screen and (max-width: 800px) {
+  #landing-title {
+    font-size: 20;
+    color: green;
+  }
+  #subTitle {
+    font-size: 7; 
+    color: purple;   
+  }
+  .navbar {
+    height: 5%;
+  }
+  .nav-text {
+    font-size: 10;
+  }
+} */
+
+@media only screen and (max-width: 1000px) {
+  #landing-title, .title {
+    font-size: 60;
+  }
+  #subTitle {
+    font-size: 24; 
+  }
+  .navbar {
+    background-color:yellow;
+  }
+  .nav-text {
+    font-size: 14;
+  }
+}
+
 body {
-  /* background:darkgray; */
   background: rgb(31,31,31);
   padding-top: 40;
   color: blanchedalmond;
   font-family: "Roboto mono", monospace; 
-}
-
-.landing-img {
-  position: relative;
-  height: 50%;
 }
 
 .page-header {
@@ -16,13 +42,14 @@ body {
 }
 
 .title {
-  font-family: "Roboto mono", monospace; 
-  font-size: 84;
-  color: blanchedalmond;
+  font-family: "Roboto mono", monospace;
+  position: center;
+  font-size: 70;
+  /* color: blanchedalmond; */
 }
 
-#subTitle {
-  font-size: 33;
+#landing-title {
+  color: black;
 }
 
 .top-centered {
@@ -33,6 +60,7 @@ body {
 }
 
 .top-subTitle {
+  font-size: 33;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,6 +70,7 @@ body {
 
 .btn-submit {
   background-color: red;
+  color: white;
 }
 .modal-header, .modal-footer {
   background-color: lightgrey;
@@ -54,6 +83,12 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: black;
+}
+
+.footer-by {
+  float: right;
+  /* position: absolute; */
+  bottom: 10px;
 }
 
 .navbar {
@@ -104,8 +139,6 @@ body {
 
 .resume-body {
   background: lightgray;
-  color:black;
-  margin: 50;
 }
 
 .resume-header {
@@ -113,9 +146,9 @@ body {
   color: darkred;
 }
 
-.resume {
-  /* text-align:'center'; */
-  /* font-weight: 400; */
+.resume-content {
+  margin: 50px;
+  color:black;
 }
 
 .section-title {
