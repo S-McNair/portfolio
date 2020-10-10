@@ -15,7 +15,7 @@
   }
 } */
 
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
   #landing-title, .title {
     font-size: 60;
   }
@@ -28,13 +28,20 @@
   .nav-text {
     font-size: 14;
   }
-}
+} */
+
+/* html {
+  margin: 0px;
+  min-height: 100%;
+} */
 
 body {
   background: rgb(31,31,31);
   padding-top: 40;
   color: blanchedalmond;
-  font-family: "Roboto mono", monospace; 
+  font-family: "Roboto mono", monospace;
+  /* height: 680px; */
+  margin: 0px;
 }
 
 .page-header {
@@ -72,6 +79,7 @@ body {
   background-color: red;
   color: white;
 }
+
 .modal-header, .modal-footer {
   background-color: lightgrey;
   color: black;
@@ -83,6 +91,7 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: black;
+  font-size: 0.75em;
 }
 
 .footer-by {
@@ -123,11 +132,11 @@ body {
   padding-bottom: 10px;
 }
 
-.projects-card {
+/* .projects-card {
   background-color: rgb(31,31,31);
   text-align: center;
   border: none;
-}
+} */
 
 .modal {
   color: black;
@@ -136,13 +145,13 @@ body {
 .contact {
   text-align: center;
 }
-
+/* -----------------------------RESUME---------------------------------------*/
 .resume-body {
-  background: lightgray;
+  background: whitesmoke;
 }
 
-.resume-header {
-  text-align:center;
+.resume-header, .section-title  {
+  font-weight: bold;
   color: darkred;
 }
 
@@ -151,27 +160,15 @@ body {
   color:black;
 }
 
-.section-title {
-  color: darkred;
-  text-align: center;
-}
-
-.company-name {
+.company-name, .job-title, .ed-titles {
+  font-size: 0.9em;
   color: darkblue;
-}
-
-.job-title {
-  color: darkblue;
-}
-
-.ed-titles {
-  color:darkblue;
 }
 
 .resume-li {
   text-align: left;
 }
-
+/* -----------------------------THANK YOU---------------------------------------*/
 .thankYou {
   text-align: center;
   font-size: 50;
@@ -183,7 +180,7 @@ body {
   margin-left: 350;
   margin-right:350;
 }
-
+/* -----------------------------ABOUT ME---------------------------------------*/
 .aboutMe-txt {
   margin: 50px;
 }
