@@ -36,7 +36,8 @@
 } */
 
 body {
-  background: rgb(31,31,31);
+  /* background: rgb(31,31,31); */
+  background-color: rgb(20, 20, 20);
   padding-top: 40;
   color: blanchedalmond;
   font-family: "Roboto mono", monospace;
@@ -56,7 +57,7 @@ body {
 }
 
 #landing-title {
-  color: black;
+  color: white;;
 }
 
 .top-centered {
@@ -72,7 +73,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: white;
 }
 
 .btn-submit {
@@ -183,4 +184,5 @@ body {
 /* -----------------------------ABOUT ME---------------------------------------*/
 .aboutMe-txt {
   margin: 50px;
+  /* background-color: black; */
 }

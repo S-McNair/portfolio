@@ -1,0 +1,126 @@
+<html>
+    
+    <head>
+      <meta charset='utf-8'>
+      <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet'>
+      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css' integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4'
+        crossorigin='anonymous'>
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+      <link rel='stylesheet' href='style.css' />
+    
+      <title> Shane's Portfolio </title>
+      <!-- <link rel="shortcutIcon" href="/favicon.ico" type="image/x-icon"> -->
+      <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+    </head>
+    
+    <body>
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+    
+      <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5>Please fill out the form below:</h5>
+              <br/>
+              <div id='contact-modal'>
+                <form action="/thanks" method="POST">
+                  <label for="firstName">First Name:</label>
+                  <br />
+                  <input id="firstName" name="firstName" type="text">
+                  <br />
+                  <br />
+                  <label for="lastName">Last Name:</label>
+                  <br />
+                  <input id="lastName" name="lastName" type="text">
+                  <br />
+                  <br />
+                  <label for="email">Email:</label>
+                  <br />
+                  <input id="email" name="email" type="text">
+                  <br />
+                  <br />
+                  <label for='message'>Message for Shane:</label>
+                  <br />
+                  <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
+                  <br/>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type='submit button' class='btn btn-submit'>Submit</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+    
+      <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
+        <div class='container-fluid'>
+    
+          <div class='navbar-header'>
+            <a class='navbar-brand' href='./' style='color:blanchedalmond' >Shane McNair</a>
+          </div>
+    
+          <ul class='nav navbar-nav mr-auto'>
+            <li>
+              <a class='active nav-text' href='about'>About Me</a>|
+            </li>
+            <li>
+              <a class='nav-text active' href='resume'>Resume</a>|
+            </li>
+            <li>
+              <a class='nav-text' href=# data-toggle="modal" data-target='#medModal'>Contact</a>|
+            </li>
+          </ul>
+    
+          <div>
+            <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
+              <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
+            </a>
+          </div>
+    
+          <div>
+            <a class='nav-text' href='https://github.com/S-McNair' target='blank'>
+              <span class="github fa fa-github-square" style="font-size:36"></span>
+            </a>
+          </div>
+    
+        </div>
+      </nav>
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START BODY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+      <img class='landing-img' src='images/index-img.png' alt='Broken Arrow' height=100% width=100% />
+      <div class='top-centered title' id='landing-title'>Shane </div>
+      <div class='top-subTitle' id='subTitle'></div>
+     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END BODY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  --> 
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+    <footer class='footer fixed-bottom'>
+        <div class='form-group'>
+          <a href='https://github.com/S-McNair'>GitHub</a>
+          |
+          <a href='https://www.linkedin.com/in/shanemcnair'>LinkedIn</a>
+          |
+          <a href='mailto:shane.mcnair@gmail.com'>shane.mcnair@gmail.com</a>
+          |
+          <span class='footer-by'>Created and maintained by: Shane McNair</span>
+        </div>
+      </footer>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+    <script>
+    const print = () => alert(JSON.stringify(experienceObj));
+    print();
+    </script>
+    </body>
+    
+    </html>

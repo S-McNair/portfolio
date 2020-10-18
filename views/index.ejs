@@ -10,109 +10,19 @@
   <link rel='stylesheet' href='style.css' />
 
   <title> Shane's Portfolio </title>
-  <!-- <link rel="shortcutIcon" href="/favicon.ico" type="image/x-icon"> -->
-  <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
 </head>
 
 <body>
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
-  <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-    <div class="modal-dialog modal-md">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h5>Please fill out the form below:</h5>
-          <br/>
-          <div id='contact-modal'>
-            <form action="/thanks" method="POST">
-              <label for="firstName">First Name:</label>
-              <br />
-              <input id="firstName" name="firstName" type="text">
-              <br />
-              <br />
-              <label for="lastName">Last Name:</label>
-              <br />
-              <input id="lastName" name="lastName" type="text">
-              <br />
-              <br />
-              <label for="email">Email:</label>
-              <br />
-              <input id="email" name="email" type="text">
-              <br />
-              <br />
-              <label for='message'>Message for Shane:</label>
-              <br />
-              <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
-              <br/>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type='submit button' class='btn btn-submit'>Submit</button>
-        </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
-  <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
-    <div class='container-fluid'>
-      <div class='navbar-header'>
-        <a class='navbar-brand' href='./' style='color:blanchedalmond' >Shane McNair</a>
-      </div>
-
-      <ul class='nav navbar-nav mr-auto'>
-        <li>
-          <a class='active nav-text' href='about'>About Me </a>
-        </li>
-        <li>
-          <a class='nav-text active' href='resume'>Resume </a>
-        </li>
-        <li>
-          <a class='nav-text' href=# data-toggle="modal" data-target='#medModal'>Contact </a>
-        </li>
-      </ul>
-      <div>
-        <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
-          <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
-        </a>
-      </div>
-      <div>
-        <a class='nav-text' href='https://github.com/S-McNair' target='blank'>
-          <span class="github fa fa-github-square" style="font-size:36"></span>
-        </a>
-      </div>
-    </div>
-  </nav>
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
+ <!-- Modal -->
+  <% include partials/modal %>
+<!-- Navbar -->
+  <% include partials/navBar %>
+<!-- Body -->
   <img class='landing-img' src='images/index-img.png' alt='Broken Arrow' height=100% width=100% />
-  <div class='top-centered title' id='landing-title' >Shane McNair</div>
+  <div class='top-centered title' id='landing-title'>Shane McNair</div>
   <div class='top-subTitle' id='subTitle'></div>
-  
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-  <footer class='footer fixed-bottom'>
-    <div class='form-group'>
-      <a href='https://github.com/S-McNair'>GitHub</a>
-      |
-      <a href='https://www.linkedin.com/in/shanemcnair'>LinkedIn</a>
-      |
-      <a href='shane.mcnair@gmail.com'>shane.mcnair@gmail.com</a>
-      |
-      <span class='footer-by'>Created and maintained by: Shane McNair</span>
-    </div>
-  </footer>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+<!-- Footer -->
+  <% include partials/footer%>
 
   <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
     crossorigin='anonymous'></script>
@@ -123,34 +33,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
 
   <script>
-
-    var subTitle = document.getElementById('subTitle');
-
+    const subTitle = document.getElementById('subTitle');
     var typewriter = new Typewriter(subTitle, {
       loop: true
     });
+    const pause = 2;
 
-    const pause = 200;
-
-    typewriter.typeString('Software Engineer')
+    typewriter.typeString('Dynamic Problem Solver')
       .pauseFor(pause)
       .deleteAll()
-      .typeString('Web Developer')
+      .typeString('Experienced Trouble Shooter')
       .pauseFor(pause)
       .deleteAll()
-      .typeString('HTML 5, CSS 3, React, Redux')
+      .typeString('JavaScript, SQL, XML/XSLT')
+      .pauseFor(pause)
+      .deleteAll()
+      .typeString('HTML, CSS')
       .pauseFor(pause)
       .deleteAll()
       .typeString('NodeJS, ExpressJS')
       .pauseFor(pause)
       .deleteAll()
-      .typeString('NoSQL, SQL, MongoDB')
+      .typeString('React, Redux')
       .pauseFor(pause)
       .deleteAll()
       .start();
-
   </script>
-
 </body>
-
 </html>

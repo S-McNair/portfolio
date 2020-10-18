@@ -1,238 +1,67 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
-    <link type='text/css' rel='stylesheet' href='style.css' />
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-    <link href='' />
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css' integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4'
+    crossorigin='anonymous'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='style.css' />
     <title>Shane's Resume</title>
 </head>
 
 <body class='resume-body'>
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
-  <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h5>Please fill out the form below:</h5>
-              <br/>
-              <div id='contact-modal'>
-                <form action="/thanks" method="POST">
-                  <label for="firstName">First Name:</label>
-                  <br />
-                  <input id="firstName" name="firstName" type="text">
-                  <br />
-                  <br />
-                  <label for="lastName">Last Name:</label>
-                  <br />
-                  <input id="lastName" name="lastName" type="text">
-                  <br />
-                  <br />
-                  <label for="email">Email:</label>
-                  <br />
-                  <input id="email" name="email" type="text">
-                  <br />
-                  <br />
-                  <label for='message'>Message for Shane:</label>
-                  <br />
-                  <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
-                  <br/>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type='submit button' class='btn btn-submit'>Submit</button>
-            </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-    
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-    
-      <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
-        <div class='container-fluid'>
-          <div class='navbar-header'>
-            <a class='navbar-brand' href='./' style='color:blanchedalmond'>Shane McNair</a>
-          </div>
-    
-          <ul class='nav navbar-nav mr-auto'>
-            <li>
-              <a class='active nav-text' href='about'>About Me </a>
-            </li>
-            <li>
-              <a class='nav-text active' href='resume'>Resume </a>
-            </li>
-            <li>
-              <a class='nav-text' href=# data-toggle="modal" data-target='#medModal'>Contact </a>
-            </li>
-          </ul>
-          <div>
-            <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
-              <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
-            </a>
-          </div>
-          <div>
-            <a class='nav-text' href='https://github.com/S-McNair' target='blank'>
-              <span class="github fa fa-github-square" style="font-size:36"></span>
-            </a>
-          </div>
-        </div>
-      </nav>
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
-    <!-- <br />
-    <br /> -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN RESUME ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
+ <!-- Modal -->
+    <% include partials/modal %>
+ <!-- Navbar -->
+   <% include partials/navBar %>
+ <!-- Body -->
     <div class='resume-content' >
 
         <h1 class='resume-header'>
             <b>SHANE McNAIR</b>
         </h1>
-        <p class='resume-header'>
-            <span class='resume-li'>
-                <a href="mailto:Shane.mcnair@gmail.com">Shane.mcnair@gmail.com</a>
-            </span>
+        <div class='resume-header'>
+            <a href="mailto:Shane.mcnair@gmail.com">Shane.mcnair@gmail.com</a>
+        </div>
+        <div class='resume-header'>San Diego, CA 92107</div>
+        <div class='resume-header' style="padding: 0 0 10px 0">
+            <a href='https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:d05c573a-b58b-4a81-b1b0-264401655fc3' target="_blank" rel="noopener">pdf link</a>
+        </div> 
+    
+        <div id="skillsContainer">
+            <h3 class='section-title'>SKILLS & TECHNOLOGIES</h3>
+            <ul id="skillsList"></ul>
+        </div>
+        <h3 class='section-title'>PROFILE</h3>
+        <p>
+            Dedicated problem solver with a sparkling reputation for customer service committed to resolving client
+            issues in a timely, efficient and professional manner. I have a background in both front and backend support
+            engineering working with live production databases in an e-comm SaaS environment. By focusing on clear
+            communication and utilizing a wide range of technologies I aim to consistently deliver the highest quality
+            experience and solutions for clients.
         </p>
-        <p class='resume-header'>San Diego, CA 92107</p>
-        <p class='resume-header'>
-            <a href='https://files.acrobat.com/a/preview/1e22cecf-6960-437d-b57c-afbd7994498a' target="_blank" rel="noopener">pdf link</a>
-        </p>
-        <p class='resume-header'>
-            <b> </b>
-        </p>
+
+        <div id="experienceContainer">
+            <h3 class='section-title'>PROFESSIONAL EXPERIENCE</h3>
+            
+            <h4 id='kiboTitle' class='job-title'></h4>
+                <p class='company-name resume-ul' id="kiboCompanyDates" style="text-align: left;"></p>
+                <ul class='resume-ul' id='kiboBullets'></ul>
+
+            <h4 id='atecTitle' class='job-title'></h4>
+                <p class='company-name' id="atecCompanyDates" style="text-align: left;"></p>
+                <ul class='resume-ul' id='atecBullets'></ul>
+
+            <h4 id='navyTitle' class='job-title'></h4>
+                <p class='company-name' id="navyCompanyDates" style="text-align: left;"></p>
+                <ul class='resume-ul' id='navyBullets'></ul>
+        </div>
 
         <h3 class='section-title'>
-            <span>SKILLS & QUALIFICATIONS:</span>
+            <span>EDUCATION & TRAINING</span>
         </h3>
-        <br />
-        <ul>
-            <li>
-                <span class='resume-li'>HTML 5, Boostrap 4, CSS 3, ReactJS, ExpressJS, NodeJS, MongoDB, SQL</span>
-            </li>
-            <li>
-                <span class='resume-li'>Confident and charismatic natural leader with a relentless work ethic</span>
-            </li>
-            <li>
-                <span class='resume-li'>Competitive self-starter with the ability to prioritize, multi-task and effectively make decisions in high
-                    pressure situations</span>
-            </li>
-            <li>
-                <span class='resume-li'>Highly trainable, quick learner with effective study skills and a positive attitude</span>
-            </li>
-            <li>
-                <span class='resume-li'>Aptitude for problem solving and the ability to determine solutions for customers </span>
-            </li>
-            <li>
-                <span class='resume-li'>Superb time management, organization and customer service skills</span>
-            </li>
-            <li>
-                <span class='resume-li'>Excellent written and verbal communication and interpersonal skills</span>
-            </li>
-            <li>
-                <span class='resume-li'>Outstanding presentation design and delivery </span>
-            </li>
-
-        </ul>
-        <p class='resume-header'>
-            <b> </b>
-        </p>
-
-        <h3 class='section-title'>
-            <span>PROFESSIONAL EXPERIENCE:</span>
-        </h3>
-        <br />
-        <h4>
-            <span class='company-name'>Advanced Test Equipment Rental Corp – San Diego, CA (February 2015 – November 2017)</span>
-        </h4>
-        <p style="text-align: left;">
-            <span class='job-title'>Calibration Technician II</span>
-        </p>
-
-        <ul class='resume-ul'>
-            <li>
-                <span class='resume-li'>Apply knowledge of measurement science, mathematics, physics and electronics to calibrate inspection, measurement
-                    and test equipment</span>
-            </li>
-            <li>
-                <span class='resume-li'>Assist Technical Support to quickly resolve customer issues</span>
-            </li>
-            <li>
-                <span class='resume-li'>Analyze measurement data for identifying abnormalities, trends and predicting future values</span>
-            </li>
-        </ul>
-        <h4>
-            <span class='company-name'>Miratum Public Relations – San Diego, CA (September 2013 – November 2014)</span>
-        </h4>
-        <p style="text-align: left;">
-            <span class='job-title'>Media Outreach Intern</span>
-        </p>
-
-        <ul class='resume-ul'>
-            <li>
-                <span class='resume-li'>Performed data analytics, market research, corporate reconnaissance and statistical analysis in support of
-                    EPIC Race Series</span>
-            </li>
-            <li>
-                <span class='resume-li'>Conducted successful cold-calling media outreach campaign in Orange County on behalf of EPIC Race Series
-                    leading up to their event in Newport Beach, CA</span>
-            </li>
-            <li>
-                <span class='resume-li'>Responsible for entering data into and maintaining the Wireless Reach Media Coverage Data Base</span>
-            </li>
-        </ul>
-        <h4 style="text-align: left;">
-            <span class='company-name'>AMEE BAY LLC – National City, CA (May 2009 – June 2010)</span>
-        </h4>
-        <p style="text-align: left;">
-            <span class='job-title'>Electrician</span>
-        </p>
-
-        <ul style="text-align: left;">
-            <li>
-                <span class='resume-li'>Maintained and repaired 120Volt and 440Volt power and lighting distribution circuits</span>
-            </li>
-            <li>
-                <span class='resume-li'>Warehouse clerk responsible for maintaining inventory on install equipment, spare parts and portable tools</span>
-            </li>
-        </ul>
-        <h4>
-            <span class='company-name'>UNITED STATES NAVY – (February 2005 – May 2009)</span>
-        </h4>
-        <p style="text-align: left;">
-            <span class='job-title'>Electrician’s Mate</span>
-        </p>
-
-        <ul class='resume-ul'>
-            <li>
-                <span class='resume-li'>Directly trained, supervised and acted as lead worker for subordinates on a daily basis</span>
-            </li>
-            <li>
-                <span class='resume-li'>Operated and maintained power and lighting circuits, electrical fixtures, film projectors, motors, generators,
-                    controllers, switchboards, voltage and frequency regulators</span>
-            </li>
-        </ul>
-        <p class='resume-header'>
-            <b> </b>
-        </p>
-
-        <h3></h3>
-        <h3 class='section-title'>
-            <span>EDUCATION & TRAINING:</span>
-        </h3>
-        <br />
         <h4>
             <span class="ed-titles">Web Development</span>
         </h4>
@@ -242,7 +71,6 @@
         <p style="text-align: left;">
             <span class='resume-li'>Graduation Date: 08 / 2018</span>
         </p>
-        <br />
         <h4>
             <span class='ed-titles'>Baccalaureate of Science Degree in Electrical Engineering / GPA: 3.55</span>
         </h4>
@@ -253,29 +81,90 @@
             <span class='resume-li'>Graduation Date: 11 / 2014</span>
         </p><br/>
     </div>
+<!-- Footer -->
+    <% include partials/footer%>
 
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN JS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
+    crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
+    crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T'
+    crossorigin='anonymous'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
+    <script type="module">
+        const expArray = [
+                            {
+                                name        : 'kibo',
+                                org         : 'Kibo Commerce',
+                                startDate   : 'October 2018',
+                                endDate     : 'Current',
+                                titles      : [
+                                            'Support Engineer II', 
+                                            'Support Engineer I'
+                                            ], //titles in descending order, index 0 = current title
+                                bulletPoints: [
+                                            'Promoted to Support Engineer II for consistent delivery of high quality solutions to clients',
+                                            'Responsible for prioritizing, triaging, and resolving incidents for enterprise clients in a fast-paced environment',
+                                            'Respond to clients with accurate and articulate answers to technical questions',
+                                            'Collaborate across teams to identify and resolve the root cause of technical issues',
+                                            'Take ownership of technical issues and drive them through to resolution'
+                                            ]
+                                },
+                            {
+                                name        : 'atec',
+                                org         : 'Advanced Test Equipment',
+                                startDate   : 'February 2015',
+                                endDate     : 'November 2017',
+                                titles      : [
+                                            'Fiber Optics Calibration Technician II', 
+                                            'Fiber Optics Calibration Technician I'
+                                            ], //titles in descending order, index 0 = current title
+                                bulletPoints: [
+                                            'Promoted to Fiber Optics Calibration Technician II for consistent delivery of accurate, well-documented products',
+                                            'Ensured accurate measurement and full operational safety for a variety of fiber optics and electrical installation and test equipment'
+                                            ]
+                                },
 
-  
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-<footer class='footer fixed-bottom'>
-    <div class='form-group'>
-      <a href='https://github.com/S-McNair'>GitHub</a>
-      |
-      <a href='https://www.linkedin.com/in/shanemcnair'>LinkedIn</a>
-      |
-      <a href='shane.mcnair@gmail.com'>shane.mcnair@gmail.com</a>
-      |
-      <span class='footer-by'>Created and maintained by: Shane McNair</span>
-    </div>
-  </footer>
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+                            {
+                                name        : 'navy',
+                                org         : 'United States Navy',
+                                startDate   : 'February 2005',
+                                endDate     : 'May 2009',
+                                titles      : [
+                                            'Electrician'
+                                            ], //titles in descending order, index 0 = current title
+                                bulletPoints: [
+                                            'Promoted three times within four years and received an Honorable Discharge at the conclusion of my enlistment contract',
+                                            'Responsible for troubleshooting, repair and maintenance of shipboard electricalsystems'
+                                            ]
+                                }
+                        ];
+
+        const createNewElement = (elementType, innerText) => {
+            const newEl = document.createElement('button');
+
+            return newEl.innerText = innerText;
+        }
+        const populateExperienceBullets = (expArray) => {
+            const expBulletElement       = document.getElementById(`${expArray.name}Bullets`);
+            const expCompanyDatesElement = document.getElementById(`${expArray.name}CompanyDates`);
+            const expTitleElement        = document.getElementById(`${expArray.name}Title`);
+            const expCompanyElement      = document.getElementById(`${expArray.name}Company`);
+            // const emptyLineItem = document.createElement('li');
+
+            const titles   = expArray.titles.map((item) => `<h4 style="list-style-type: none;">${item}</h4>`)
+            const orgDates = `<span class='company-name'>${expArray.org} – San Diego, CA (${expArray.startDate} – ${expArray.endDate})</span>`
+            const lineItem = expArray.bulletPoints.map((item) => `<li>${item}</li>`);
+
+            return (
+                expTitleElement.innerHTML = titles.join(''),
+                expCompanyDatesElement.innerHTML = orgDates,
+                expBulletElement.innerHTML = lineItem.join('')
+            )
+        };
+        expArray.map((item) => populateExperienceBullets(item))
+    </script>
         
 </body>
 

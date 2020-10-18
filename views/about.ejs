@@ -11,88 +11,12 @@
 </head>
 
 <body>
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
-  <div class="modal fade" id="medModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" id="myModalLabel">Contact Shane</h3>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <h5>Please fill out the form below:</h5>
-            <br/>
-            <div id='contact-modal'>
-              <form action="/thanks" method="POST">
-                <label for="firstName">First Name:</label>
-                <br />
-                <input id="firstName" name="firstName" type="text">
-                <br />
-                <br />
-                <label for="lastName">Last Name:</label>
-                <br />
-                <input id="lastName" name="lastName" type="text">
-                <br />
-                <br />
-                <label for="email">Email:</label>
-                <br />
-                <input id="email" name="email" type="text">
-                <br />
-                <br />
-                <label for='message'>Message for Shane:</label>
-                <br />
-                <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
-                <br/>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type='submit button' class='btn btn-submit'>Submit</button>
-          </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-  
-    <nav class='navbar navbar-dark navbar-expand-lg fixed-top'>
-      <div class='container-fluid'>
-        <div class='navbar-header'>
-          <a class='navbar-brand' href='./' style='color:blanchedalmond'>Shane McNair</a>
-        </div>
-  
-        <ul class='nav navbar-nav mr-auto'>
-          <li>
-            <a class='active nav-text' href='about'>About Me </a>
-          </li>
-          <li>
-            <a class='nav-text active' href='resume'>Resume </a>
-          </li>
-          <li>
-            <a class='nav-text' href=# data-toggle="modal" data-target='#medModal'>Contact </a>
-          </li>
-        </ul>
-        <div>
-          <a class='nav-text' href='https://www.linkedin.com/in/shanemcnair/' target='blank'>
-            <span class='linkedIn fa fa-linkedin-square' style='font-size:36; padding-right:10'></span>
-          </a>
-        </div>
-        <div>
-          <a class='nav-text' href='https://github.com/S-McNair' target='blank'>
-            <span class="github fa fa-github-square" style="font-size:36"></span>
-          </a>
-        </div>
-      </div>
-    </nav><br/>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-
-  <header class='page-header title'>
+ <!-- Modal -->
+ <% include partials/modal %>
+ <!-- Navbar -->
+   <% include partials/navBar %>
+ <!-- Body -->
+  <header class='page-header title' style="padding-top: 20px;">
     <h1 style='text-align:center'>Shane McNair</h1>
   </header>
 
@@ -102,9 +26,6 @@
 
       <p>
         For more information please check out my
-        <strong>
-          <a href='projects'>Projects</a>
-        </strong> and
         <strong>
           <a href='resume'>Resume</a>
         </strong> or
@@ -120,21 +41,8 @@
     </div>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END IMAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
   </div>
-
-  
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-<footer class='footer fixed-bottom'>
-  <div class='form-group'>
-    <a href='https://github.com/S-McNair'>GitHub</a>
-    |
-    <a href='https://www.linkedin.com/in/shanemcnair'>LinkedIn</a>
-    |
-    <a href='shane.mcnair@gmail.com'>shane.mcnair@gmail.com</a>
-    |
-    <span class='footer-by'>Created and maintained by: Shane McNair</span>
-  </div>
-</footer>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+<!-- Footer -->
+<% include partials/footer%>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

@@ -1,8 +1,8 @@
 require('dotenv').config();
-const express = require('express');
-const morgan = require('morgan');
+const express    = require('express');
+const morgan     = require('morgan');
 const bodyParser = require('body-parser');
-var profile = require('./profile');
+const profile    = require('./profile');
 
 const sgMail = require('@sendgrid/mail');
 
@@ -41,8 +41,8 @@ app.get('/resume', (rep, res) => {
   res.render('resume');
 });
 
-app.get('/projects', (rep, res) => {
-  res.render('projects');
+app.get('/home', (rep, res) => {
+  res.render('home');
 });
 
 app.post('/thanks', (req, res) => {
