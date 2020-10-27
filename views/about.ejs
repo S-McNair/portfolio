@@ -12,28 +12,18 @@
 
 <body>
  <!-- Modal -->
- <% include partials/modal %>
+  <% include partials/modal %>
  <!-- Navbar -->
-   <% include partials/navBar %>
+  <% include partials/navBar %>
  <!-- Body -->
-  <header class='page-header title' style="padding-top: 20px;">
+  <!-- <header class='page-header title' style="padding-top: 20px;">
     <h1 style='text-align:center'>Shane McNair</h1>
-  </header>
+  </header> -->
 
   <div class='aboutMe-txt form-group row'>
 
     <div class='col-md-8'>
-
-      <p>
-        For more information please check out my
-        <strong>
-          <a href='resume'>Resume</a>
-        </strong> or
-        <strong>
-          <a href=# data-toggle="modal" data-target="#medModal">contact me directly.</a>
-        </strong>
-      </p>
-      <br/>
+      <% include partials/aboutParagraph%>
     </div>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START IMAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
     <div id='about-img' class='col-md-4'>

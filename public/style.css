@@ -76,16 +76,6 @@ body {
   color: white;
 }
 
-.btn-submit {
-  background-color: red;
-  color: white;
-}
-
-.modal-header, .modal-footer {
-  background-color: lightgrey;
-  color: black;
-}
-
 .footer {
   padding-left: 40px;
   padding-right: 40px;
@@ -138,9 +128,20 @@ body {
   text-align: center;
   border: none;
 } */
-
-.modal {
+/* -----------------------------CONTACT MODAL----------------------------------*/
+.modal-body {
+  background-color: darkgrey;
   color: black;
+}
+
+.modal-header, .modal-footer {
+  background-color: lightgrey;
+  color: black;
+}
+
+.btn-submit {
+  background-color: red;
+  color: white;
 }
 
 .contact {
@@ -148,27 +149,35 @@ body {
 }
 /* -----------------------------RESUME---------------------------------------*/
 .resume-body {
-  background: whitesmoke;
+  color: grey;
 }
+
+.company-name, .job-title, .ed-titles{
+  color: lightgrey;
+} 
 
 .resume-header, .section-title  {
   font-weight: bold;
   color: darkred;
+  padding-top: 10px;
 }
 
 .resume-content {
   margin: 50px;
-  color:black;
 }
 
-.company-name, .job-title, .ed-titles {
+#profileContainer, #skillsList {
+  padding: 0 0 0 25px;
+}
+
+.company-name, .job-title {
   font-size: 0.9em;
-  color: darkblue;
 }
 
-.resume-li {
-  text-align: left;
+.ed-titles {
+  padding: 10 0 0 0;
 }
+
 /* -----------------------------THANK YOU---------------------------------------*/
 .thankYou {
   text-align: center;

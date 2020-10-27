@@ -18,31 +18,34 @@
    <% include partials/navBar %>
  <!-- Body -->
     <div class='resume-content' >
-
+<!-- Resume Header -->
         <h1 class='resume-header'>
             <b>SHANE McNAIR</b>
         </h1>
-        <div class='resume-header'>
+        <div id='resume-header'>
+        <div>
             <a href="mailto:Shane.mcnair@gmail.com">Shane.mcnair@gmail.com</a>
         </div>
-        <div class='resume-header'>San Diego, CA 92107</div>
-        <div class='resume-header' style="padding: 0 0 10px 0">
-            <a href='https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:d05c573a-b58b-4a81-b1b0-264401655fc3' target="_blank" rel="noopener">pdf link</a>
+        <div>San Diego, CA 92107</div>
+        <div style="padding: 0 0 10px 0">
+            <a href='https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:d05c573a-b58b-4a81-b1b0-264401655fc3' target="_blank" rel="noopener">resume pdf</a>
         </div> 
-    
+        </div>
+<!-- Skills Section     -->
         <div id="skillsContainer">
             <h3 class='section-title'>SKILLS & TECHNOLOGIES</h3>
-            <ul id="skillsList"></ul>
+            <div id="skillsList"></div>
         </div>
+<!-- Profile -->
         <h3 class='section-title'>PROFILE</h3>
-        <p>
+        <p id='profileContainer'>
             Dedicated problem solver with a sparkling reputation for customer service committed to resolving client
             issues in a timely, efficient and professional manner. I have a background in both front and backend support
             engineering working with live production databases in an e-comm SaaS environment. By focusing on clear
             communication and utilizing a wide range of technologies I aim to consistently deliver the highest quality
             experience and solutions for clients.
         </p>
-
+<!-- Experience -->
         <div id="experienceContainer">
             <h3 class='section-title'>PROFESSIONAL EXPERIENCE</h3>
             
@@ -58,28 +61,10 @@
                 <p class='company-name' id="navyCompanyDates" style="text-align: left;"></p>
                 <ul class='resume-ul' id='navyBullets'></ul>
         </div>
-
-        <h3 class='section-title'>
-            <span>EDUCATION & TRAINING</span>
-        </h3>
-        <h4>
-            <span class="ed-titles">Web Development</span>
-        </h4>
-        <p style="text-align: left;">
-            <span class='resume-li'>Origin Code Academy / San Diego, CA</span>
-        </p>
-        <p style="text-align: left;">
-            <span class='resume-li'>Graduation Date: 08 / 2018</span>
-        </p>
-        <h4>
-            <span class='ed-titles'>Baccalaureate of Science Degree in Electrical Engineering / GPA: 3.55</span>
-        </h4>
-        <p style="text-align: left;">
-            <span class='resume-li'>ITT Technical Institute / San Diego, CA</span>
-        </p>
-        <p style="text-align: left;">
-            <span class='resume-li'>Graduation Date: 11 / 2014</span>
-        </p><br/>
+<!-- Education & Training -->
+        <h3 class='section-title'>EDUCATION & TRAINING</h3>
+        <div id="educationTraining"></div>
+        <br/>
     </div>
 <!-- Footer -->
     <% include partials/footer%>
@@ -93,7 +78,16 @@
     crossorigin='anonymous'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
     <script type="module">
-        const expArray = [
+        const skillsArray = ['JavaScript', 
+                             'React',
+                             'SQL Server', 
+                             'XML/XSLT', 
+                             'HTML', 
+                             'CSS',
+                             'JQuery',
+                             'Git'];
+
+        const expArray    = [
                             {
                                 name        : 'kibo',
                                 org         : 'Kibo Commerce',
@@ -136,22 +130,36 @@
                                             ], //titles in descending order, index 0 = current title
                                 bulletPoints: [
                                             'Promoted three times within four years and received an Honorable Discharge at the conclusion of my enlistment contract',
-                                            'Responsible for troubleshooting, repair and maintenance of shipboard electricalsystems'
+                                            'Responsible for troubleshooting, repair and maintenance of shipboard electrical systems'
                                             ]
                                 }
                         ];
-
+        
+        const educationTrainingArray = [
+                            {
+                                degree   : 'Certification in Full Stack Web Development',
+                                org      : 'Origin Code Academy',
+                                location : 'San Diego, CA',
+                                gradDate : 'August 2018'
+                            },
+                            {
+                                degree   : 'Baccalaureate of Science Degree in Electrical Engineering',
+                                org      : 'ITT Technical Institute',
+                                location : 'San Diego, CA',
+                                gradDate : 'December 2014'
+                            },
+                        ];
+        
         const createNewElement = (elementType, innerText) => {
             const newEl = document.createElement('button');
-
             return newEl.innerText = innerText;
         }
         const populateExperienceBullets = (expArray) => {
+            const container = document.getElementById('resumeContainer');
             const expBulletElement       = document.getElementById(`${expArray.name}Bullets`);
             const expCompanyDatesElement = document.getElementById(`${expArray.name}CompanyDates`);
             const expTitleElement        = document.getElementById(`${expArray.name}Title`);
             const expCompanyElement      = document.getElementById(`${expArray.name}Company`);
-            // const emptyLineItem = document.createElement('li');
 
             const titles   = expArray.titles.map((item) => `<h4 style="list-style-type: none;">${item}</h4>`)
             const orgDates = `<span class='company-name'>${expArray.org} – San Diego, CA (${expArray.startDate} – ${expArray.endDate})</span>`
@@ -163,7 +171,34 @@
                 expBulletElement.innerHTML = lineItem.join('')
             )
         };
+        const populateEducationAndTraining = (item) => {
+            const container   = document.getElementById('educationTraining');
+            const degreeTitle = document.createElement('h4');
+            const orgName     = document.createElement('div');
+            const location    = document.createElement('div');
+            const gradDate    = document.createElement('div');
+            
+            degreeTitle.setAttribute('class', 'ed-titles');
+            degreeTitle.innerHTML = item.degree;
+            orgName.innerHTML     = item.org;
+            location.innerHTML    = item.location;
+            gradDate.innerHTML    = `Graduation Date: ${item.gradDate}`;
+            const returnEl = (container.appendChild(degreeTitle),
+                              container.appendChild(orgName), 
+                              container.appendChild(location), 
+                              container.appendChild(gradDate));
+            //console.log(returnEl);
+            
+            return returnEl
+        }
+        const populateSkillsTechnologies = (item) => {
+            const newItem = `${item} | `
+            return console.log(newItem), newItem
+        }
+
+        document.getElementById('skillsList').innerHTML = skillsArray.map((item) => populateSkillsTechnologies(item)).join('')
         expArray.map((item) => populateExperienceBullets(item))
+        educationTrainingArray.map((item) => populateEducationAndTraining(item))
     </script>
         
 </body>
