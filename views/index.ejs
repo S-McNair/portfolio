@@ -18,8 +18,8 @@
 <!-- Navbar -->
   <% include partials/navBar %>
 <!-- Body -->
-  <img class='landing-img' src='images/index-img.png' alt='Broken Arrow' height=100% width=100% />
-  <div class='top-centered title' id='landing-title'>Shane McNair</div>
+  <!-- <img class='landing-img' src='images/index-img.png' alt='Broken Arrow' height=100% width=100% /> -->
+  <h1 class='top-centered title' id='landing-title'>Shane McNair</h1>
   <div class='top-subTitle' id='subTitle'></div>
 <!-- Footer -->
   <% include partials/footer%>
@@ -34,7 +34,7 @@
 
   <script>
     const subTitle = document.getElementById('subTitle');
-    var typewriter = new Typewriter(subTitle, {
+    const typewriter = new Typewriter(subTitle, {
       loop: true
     });
     const pause = 200;
