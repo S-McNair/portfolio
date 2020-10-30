@@ -152,7 +152,7 @@ body {
   color: grey;
 }
 
-.company-name, .job-title, .ed-titles{
+.company-name, .job-title, .ed-titles, #skillsList{
   color: lightgrey;
 } 
 
