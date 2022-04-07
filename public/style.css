@@ -1,4 +1,4 @@
-/* @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   #landing-title {
     font-size: 20;
     color: green;
@@ -13,9 +13,9 @@
   .nav-text {
     font-size: 10;
   }
-} */
+}
 
-/* @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   #landing-title, .title {
     font-size: 60;
   }
@@ -28,12 +28,12 @@
   .nav-text {
     font-size: 14;
   }
-} */
+}
 
-/* html {
+html {
   margin: 0px;
   min-height: 100%;
-} */
+}
 
 body {
   /* background: rgb(31,31,31); */
