@@ -11,34 +11,51 @@
           <h5>Please fill out the form below:</h5>
           <br/>
           <div id='contact-modal'>
-            <form action="/thanks" method="POST">
+            <form id="contact_form" action="send" method="POST" enctype = "multipart/form-data" >
               <label for="firstName">First Name:</label>
               <br />
-              <input id="firstName" name="firstName" type="text">
+              <input id="firstName" name="firstName" type="text" required>
               <br />
               <br />
               <label for="lastName">Last Name:</label>
               <br />
-              <input id="lastName" name="lastName" type="text">
+              <input id="lastName" name="lastName" type="text" required>
               <br />
               <br />
               <label for="email">Email:</label>
               <br />
-              <input id="email" name="email" type="text">
+              <input id="email" name="email" type="text" required>
               <br />
               <br />
               <label for='message'>Message for Shane:</label>
               <br />
-              <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here'></textarea>
+              <textarea cols='45' rows='5' name='message' id='message' class='centerinput' placeholder='Enter message for Shane here' required></textarea>
               <br/>
           </div>
         </div>
         <div class="modal-footer">
-          <button type='submit button' class='btn btn-submit'>Submit</button>
+          <button type='submit' value="submit" class='btn btn-submit'>Submit</button>
         </div>
         </form>
       </div>
+      <script> //https://lo-victoria.com/how-to-build-a-contact-form-with-javascript-and-nodemailer
+          const form = document.getElementById("contact-form"); 
+          const formEvent = form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            let mail = new FormData(form);
+            sendMail(mail);
+          })
+          const sendMail = (mail) => {
+            fetch("/send", {
+              method: "post",
+              body: mail,
+
+            }).then((response) => {
+              return response.json();
+            });
+          };
+      </script>
     </div>
   </div>
-  </div>
-  </div>
+  <!-- </div>
+  </div> -->
